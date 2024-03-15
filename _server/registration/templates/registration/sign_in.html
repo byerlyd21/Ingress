@@ -1,22 +1,66 @@
 {% extends "registration/base.html"%}
 
 {% block content %}
-<form action="/registration/sign_in/" method="post">
-  {% csrf_token %}
-  <div>
-    <label>
-      Email
-      <input type="email" name="email">
-    </label>
-  </div>
-  <div>
-    <label>
-      Password
-      <input type="password" name="password">
-    </label>
-  </div>
-  <button>Sign In</button>
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
 
-</form>
-<a href="/registration/sign_up/">Create New Account</a>
+                <div class="text-center">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">We are The Ingress Team</h4>
+                </div>
+
+                <form action="/registration/sign_in/" method="post">
+                  {% csrf_token %}
+
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form2Example11" class="form-control"
+                      placeholder="Email address" />
+                    <label class="form-label" for="form2Example11">Email</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form2Example22" class="form-control" />
+                    <label class="form-label" for="form2Example22">Password</label>
+                  </div>
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
+                      in</button>
+                    <a class="text-muted" href="#!">Forgot password?</a>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">Don't have an account?</p>
+                    <a type="button" class="btn btn-outline-danger" href="/registration/sign_up/">Create new</a>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">You are more than just a client</h4>
+                <p class="small mb-0">As a valued member of our community, you are at the heart of our mission to redefine 
+                  business success through AI. Here, innovation meets application, providing you with the tools and insights 
+                  needed to stay ahead. Your journey towards transformative solutions continues—let's unlock the next level 
+                  of excellence together. Sign in to access your personalized dashboard and explore the latest advancements 
+                  and opportunities tailored for you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
+
